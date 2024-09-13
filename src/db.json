@@ -1,0 +1,264 @@
+{
+  "foodMenu": [
+    {
+      "id": 1,
+      "title": "Aperitiv",
+      "details": [
+        "Ruladă cu șuncă și brânză",
+        "Ciupercă umplută cu quattro formaggi",
+        "Șnițel de pui cu susan",
+        "Chiftea de porc umplută cu ou de prepeliță și sos de ardei",
+        "Creveți picanți cu lămâie și cocktail de hrean",
+        "Blini de somon afumat, cremă de smântână și caviar",
+        "Biscuit de rață confit și dulceață de ceapă",
+        "Canape cu salată de pui Waldorf",
+        "Găluște cu fructe de mare și sos ponzu",
+        "Creveți tempura cu sos dulce picant"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Ciorbă",
+      "details": ["Ciorbă de pui a la grec"]
+    },
+    {
+      "id": 3,
+      "title": "Stație de Sushi",
+      "details": ["Nigiri", "Sushi", "Maki"]
+    },
+    {
+      "id": 4,
+      "title": "Fel Principal",
+      "details": [
+        "Duo din carne de porc si carne de pui format din mușchiuleț de porc prăjit și piept de pui la foc mic, varză roșie sotată, piure de cartofi cu hrean și sos de mere cu muștar"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Desert",
+      "details": ["Tortul Mirilor"]
+    },
+    {
+      "id": 6,
+      "title": "Cina",
+      "details": ["Sarmale cu smântână și mămăligă", "Mini burger"]
+    }
+  ],
+  "drinksMenu": [
+    {
+      "id": 1,
+      "title": "Cafea",
+      "details": ["Specialitati de Cafea"],
+      "image": "/Photos/DrinksMenu/coffe.png"
+    },
+    {
+      "id": 2,
+      "title": "Bauturi Racoritoare",
+      "details": [
+        "Apă Minerală Naturală Plată Izvorul Alb",
+        "Apă Mineraă Carbogazoasă Dorna",
+        "Coca Cola, Coca Cola Zero",
+        "Sprite, Fanta",
+        "Schweppes Tonic",
+        "FuzeTea, Cappy"
+      ],
+      "image": "/Photos/DrinksMenu/water.png"
+    },
+    {
+      "id": 3,
+      "title": "Bere",
+      "details": ["Carlsberg", "Birra Moretti", "Carlsberg fără alcool"],
+      "image": "/Photos/DrinksMenu/beer.png"
+    },
+    {
+      "id": 4,
+      "title": "Vin",
+      "details": [
+        "Vin Spumant",
+        "Vin Alb Issa Sauvignon Blanc",
+        "Vin Rose Issa Roze",
+        "Vin Roșu Issa Fetească Neagră"
+      ],
+      "image": "/Photos/DrinksMenu/red-wine.png"
+    },
+    {
+      "id": 5,
+      "title": "Spirits",
+      "details": [
+        "Tuica Issa",
+        "Aperol, Campari",
+        "Baileys, Jidvei",
+        "Whiskey Jack Daniels",
+        "Whiskey Chivas 12 Regal",
+        "Bacardi, Kraken",
+        "Martini Alb Rosu",
+        "Tequila Cuervo Silver",
+        "Jagermeister",
+        "Tanquerey Gin",
+        "Vodka Absolut"
+      ],
+      "image": "/Photos/DrinksMenu/spirits.png"
+    },
+    {
+      "id": 6,
+      "title": "Cocktails",
+      "details": [
+        "Cuba Libre",
+        "Mojito",
+        "Aperol Spritz",
+        "Campari Orange",
+        "Tequila Sunrise",
+        "Hugor",
+        "Gin Tonic",
+        "Vodka Soft",
+        "Green Apple",
+        "Cherry Lady",
+        "Virgin Mojito"
+      ],
+      "image": "/Photos/DrinksMenu/cocktail.png"
+    },
+    {
+      "id": 7,
+      "title": "Shot-uri",
+      "details": ["Tequilla", "Jägermeister", "Kamikaze"],
+      "image": "/Photos/DrinksMenu/shot.png"
+    }
+  ],
+  "contactPersons": [
+    {
+      "id": 1,
+      "name": "Felix Cobliș",
+      "phone": "0722434047"
+    },
+    {
+      "id": 2,
+      "name": "Cristiana Cobliș",
+      "phone": "0723711696"
+    },
+    {
+      "id": 3,
+      "name": "Ștefan Pop",
+      "phone": "0744695309"
+    },
+    {
+      "id": 4,
+      "name": "Susana Pop",
+      "phone": "0740106511"
+    },
+    {
+      "id": 5,
+      "name": "Andrei Cobliș",
+      "phone": "0735176232"
+    },
+    {
+      "id": 6,
+      "name": "Ioana Pop",
+      "phone": "0751898386"
+    }
+  ],
+  "schedule": [
+    {
+      "id": 1,
+      "locationTitle": "Cununia Civila",
+      "locationStreet": "Parcul Central",
+      "time": "12:00",
+      "image": "/Photos/Schedule/catedrala.jpg"
+    },
+    {
+      "id": 2,
+      "locationTitle": "Cununia Religioasa",
+      "locationStreet": "Catedrala Mitropolitană",
+      "time": "16:30",
+      "image": "/Photos/Schedule/cununie.jpg"
+    },
+    {
+      "id": 3,
+      "locationTitle": "Petrecerea",
+      "locationStreet": "Radisson Blu Hotel",
+      "time": "18:00",
+      "image": "/Photos/Schedule/restaurant.jpeg"
+    }
+  ],
+  "locationMap": [
+    {
+      "id": 1,
+      "name": "Starea Civila",
+      "details": "Foișorul de ceremonii, Parcul Central",
+      "lat": 46.768763500000006,
+      "lng": 23.57671509313253,
+      "zoom": 16
+    },
+    {
+      "id": 2,
+      "name": "Catedrala",
+      "details": "Piața Avram Iancu",
+      "lat": 46.7718945,
+      "lng": 23.596311204163143,
+      "zoom": 15
+    },
+    {
+      "id": 3,
+      "name": "Radisson Blu Hotel",
+      "details": "Aleea Stadionului 1",
+      "lat": 46.767319549999996,
+      "lng": 23.573493533597137,
+      "zoom": 15.5
+    }
+  ],
+  "coverImage": [
+    {
+      "id": 1,
+      "image": "/Photos/CoverImages/CoverImageOne.jpeg"
+    },
+    {
+      "id": 2,
+      "image": "/Photos/CoverImages/CoverImageTwo.jpg"
+    },
+    {
+      "id": 3,
+      "image": "/Photos/CoverImages/CoverImageThree.jpg"
+    }
+  ],
+  "pages": [
+    {
+      "id": 1,
+      "path": "/",
+      "name": "Acasă"
+    },
+    {
+      "id": 2,
+      "path": "/povestea-noastra",
+      "name": "Povestea noastră"
+    },
+    {
+      "id": 3,
+      "path": "/poze",
+      "name": "Poze"
+    },
+    {
+      "id": 4,
+      "path": "/meniu-mancare",
+      "name": "Meniul de Mâncare"
+    },
+    {
+      "id": 5,
+      "path": "/meniu-bauturi",
+      "name": "Meniul de Băuturi"
+    },
+    {
+      "id": 6,
+      "path": "/programa",
+      "name": "Programa"
+    },
+    {
+      "id": 7,
+      "path": "/locatii",
+      "name": "Locații"
+    },
+    {
+      "id": 8,
+      "path": "/confirmare",
+      "name": "Confirmare"
+    }
+  ]
+}
