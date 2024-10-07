@@ -133,7 +133,7 @@
     {
       "id": 2,
       "name": "Cristiana Cobliș",
-      "phone": "0723711696"
+      "phone": "0733988720"
     },
     {
       "id": 3,
@@ -159,14 +159,14 @@
   "schedule": [
     {
       "id": 1,
-      "locationTitle": "Cununia Civila",
+      "locationTitle": "Cununia Civilă",
       "locationStreet": "Parcul Central",
       "time": "12:00",
       "image": "/Photos/Schedule/catedrala.jpg"
     },
     {
       "id": 2,
-      "locationTitle": "Cununia Religioasa",
+      "locationTitle": "Cununia Religioasă",
       "locationStreet": "Catedrala Mitropolitană",
       "time": "16:30",
       "image": "/Photos/Schedule/cununie.jpg"
@@ -182,7 +182,7 @@
   "locationMap": [
     {
       "id": 1,
-      "name": "Starea Civila",
+      "name": "Starea Civilă",
       "details": "Foișorul de ceremonii, Parcul Central",
       "lat": 46.768763500000006,
       "lng": 23.57671509313253,
@@ -208,15 +208,239 @@
   "coverImage": [
     {
       "id": 1,
-      "image": "/Photos/CoverImages/CoverImageOne.jpeg"
+      "image": "/Photos/CoverImages/A&I-13.jpg"
     },
     {
       "id": 2,
-      "image": "/Photos/CoverImages/CoverImageTwo.jpg"
+      "image": "/Photos/CoverImages/A&I-24.jpg"
     },
     {
       "id": 3,
-      "image": "/Photos/CoverImages/CoverImageThree.jpg"
+      "image": "/Photos/CoverImages/A&I-26.jpg"
+    },
+    {
+      "id": 4,
+      "image": "/Photos/CoverImages/A&I-30.jpg"
+    },
+    {
+      "id": 5,
+      "image": "/Photos/CoverImages/A&I-31.jpg"
+    },
+    {
+      "id": 6,
+      "image": "/Photos/CoverImages/A&I-32.jpg"
+    },
+    {
+      "id": 7,
+      "image": "/Photos/CoverImages/A&I-37.jpg"
+    },
+    {
+      "id": 8,
+      "image": "/Photos/CoverImages/A&I-98.jpg"
+    },
+    {
+      "id": 9,
+      "image": "/Photos/CoverImages/A&I-106.jpg"
+    },
+    {
+      "id": 10,
+      "image": "/Photos/CoverImages/A&I-107.jpg"
+    },
+    {
+      "id": 11,
+      "image": "/Photos/CoverImages/A&I-109.jpg"
+    },
+    {
+      "id": 12,
+      "image": "/Photos/CoverImages/A&I-112.jpg"
+    },
+    {
+      "id": 13,
+      "image": "/Photos/CoverImages/A&I-116.jpg"
+    },
+    {
+      "id": 14,
+      "image": "/Photos/CoverImages/A&I-312.jpg"
+    },
+    {
+      "id": 15,
+      "image": "/Photos/CoverImages/A&I-315.jpg"
+    },
+    {
+      "id": 16,
+      "image": "/Photos/CoverImages/A&I-317.jpg"
+    },
+    {
+      "id": 17,
+      "image": "/Photos/CoverImages/A&I-318.jpg"
+    },
+    {
+      "id": 18,
+      "image": "/Photos/CoverImages/A&I-324.jpg"
+    },
+    {
+      "id": 19,
+      "image": "/Photos/CoverImages/A&I-374.jpg"
+    },
+    {
+      "id": 20,
+      "image": "/Photos/CoverImages/A&I-379.jpg"
+    },
+    {
+      "id": 21,
+      "image": "/Photos/CoverImages/A&I-382.jpg"
+    },
+    {
+      "id": 22,
+      "image": "/Photos/CoverImages/A&I-385.jpg"
+    },
+    {
+      "id": 23,
+      "image": "/Photos/CoverImages/A&I-388.jpg"
+    },
+    {
+      "id": 24,
+      "image": "/Photos/CoverImages/A&I-390.jpg"
+    },
+    {
+      "id": 25,
+      "image": "/Photos/CoverImages/A&I-415.jpg"
+    },
+    {
+      "id": 26,
+      "image": "/Photos/CoverImages/A&I-427.jpg"
+    },
+    {
+      "id": 27,
+      "image": "/Photos/CoverImages/A&I-445.jpg"
+    },
+    {
+      "id": 28,
+      "image": "/Photos/CoverImages/A&I-472.jpg"
+    },
+    {
+      "id": 29,
+      "image": "/Photos/CoverImages/A&I-487.jpg"
+    },
+    {
+      "id": 30,
+      "image": "/Photos/CoverImages/A&I-489.jpg"
+    },
+    {
+      "id": 31,
+      "image": "/Photos/CoverImages/A&I-491.jpg"
+    },
+    {
+      "id": 32,
+      "image": "/Photos/CoverImages/A&I-495.jpg"
+    },
+    {
+      "id": 33,
+      "image": "/Photos/CoverImages/A&I-505.jpg"
+    },
+    {
+      "id": 34,
+      "image": "/Photos/CoverImages/A&I-522.jpg"
+    },
+    {
+      "id": 35,
+      "image": "/Photos/CoverImages/A&I-523.jpg"
+    },
+    {
+      "id": 36,
+      "image": "/Photos/CoverImages/A&I-531.jpg"
+    },
+    {
+      "id": 37,
+      "image": "/Photos/CoverImages/A&I-540.jpg"
+    },
+    {
+      "id": 38,
+      "image": "/Photos/CoverImages/A&I-543.jpg"
+    },
+    {
+      "id": 39,
+      "image": "/Photos/CoverImages/A&I-544.jpg"
+    },
+    {
+      "id": 40,
+      "image": "/Photos/CoverImages/A&I-550.jpg"
+    },
+    {
+      "id": 41,
+      "image": "/Photos/CoverImages/A&I-551.jpg"
+    },
+    {
+      "id": 42,
+      "image": "/Photos/CoverImages/A&I-552.jpg"
+    },
+    {
+      "id": 43,
+      "image": "/Photos/CoverImages/A&I-556.jpg"
+    },
+    {
+      "id": 44,
+      "image": "/Photos/CoverImages/A&I-561.jpg"
+    },
+    {
+      "id": 45,
+      "image": "/Photos/CoverImages/A&I-583.jpg"
+    },
+    {
+      "id": 46,
+      "image": "/Photos/CoverImages/A&I-594.jpg"
+    },
+    {
+      "id": 47,
+      "image": "/Photos/CoverImages/A&I-596.jpg"
+    },
+    {
+      "id": 48,
+      "image": "/Photos/CoverImages/A&I-602.jpg"
+    },
+    {
+      "id": 49,
+      "image": "/Photos/CoverImages/A&I-607.jpg"
+    },
+    {
+      "id": 50,
+      "image": "/Photos/CoverImages/A&I-608.jpg"
+    },
+    {
+      "id": 51,
+      "image": "/Photos/CoverImages/A&I-609.jpg"
+    },
+    {
+      "id": 52,
+      "image": "/Photos/CoverImages/A&I-613.jpg"
+    },
+    {
+      "id": 53,
+      "image": "/Photos/CoverImages/A&I-615.jpg"
+    },
+    {
+      "id": 54,
+      "image": "/Photos/CoverImages/A&I-620.jpg"
+    },
+    {
+      "id": 55,
+      "image": "/Photos/CoverImages/A&I-626.jpg"
+    },
+    {
+      "id": 56,
+      "image": "/Photos/CoverImages/A&I-627.jpg"
+    },
+    {
+      "id": 57,
+      "image": "/Photos/CoverImages/A&I-631.jpg"
+    },
+    {
+      "id": 58,
+      "image": "/Photos/CoverImages/A&I-660.jpg"
+    },
+    {
+      "id": 59,
+      "image": "/Photos/CoverImages/A&I-689.jpg"
     }
   ],
   "pages": [
@@ -225,11 +449,7 @@
       "path": "/",
       "name": "Acasă"
     },
-    {
-      "id": 2,
-      "path": "/povestea-noastra",
-      "name": "Povestea noastră"
-    },
+
     {
       "id": 3,
       "path": "/poze",
@@ -238,12 +458,12 @@
     {
       "id": 4,
       "path": "/meniu-mancare",
-      "name": "Meniul de Mâncare"
+      "name": "Meniul de mâncare"
     },
     {
       "id": 5,
       "path": "/meniu-bauturi",
-      "name": "Meniul de Băuturi"
+      "name": "Meniul de băuturi"
     },
     {
       "id": 6,

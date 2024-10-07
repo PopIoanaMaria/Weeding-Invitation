@@ -6,7 +6,7 @@ const FoodMenu: React.FC = () => {
 
   return (
     <ContainerMenu
-      title={"Meniu de Mancare"}
+      title={"Meniu de mâncare"}
       menu={foodMenu}
       isFoodMenu={true}
     />

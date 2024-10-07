@@ -6,6 +6,11 @@ import useMobile from "../../Hooks/useMobile";
 import images from "./../../db.json";
 import { calculateTimeLeft } from "../../Functions/timer";
 
+const getRandomImages = (imagesArray: any, num: number) => {
+  const shuffled = [...imagesArray].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, num);
+};
+
 const CountdownTimer: React.FC = () => {
   const isWeb = useWeb();
   const isMobile = useMobile();
@@ -13,21 +18,31 @@ const CountdownTimer: React.FC = () => {
   const coverImages = images.coverImage;
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [randomImages, setRandomImages] = useState(
+    getRandomImages(coverImages, 3)
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+    const imageChangeInterval = setInterval(() => {
+      setRandomImages(getRandomImages(coverImages, 3));
+    }, 10000);
+
+    return () => {
+      clearInterval(timer);
+      clearInterval(imageChangeInterval);
+    };
+  }, [coverImages]);
 
   return (
     <Container>
       {isMobile && <Image src={CoverImageOne} alt="img" isMobile={isMobile} />}
       {isWeb && (
         <ImagesContainer>
-          {coverImages.map((image) => (
+          {randomImages.map((image) => (
             <Image src={image.image} alt="img" />
           ))}
         </ImagesContainer>
@@ -78,7 +93,7 @@ const Time = styled.div<{ isMobile?: boolean }>`
 
 const TimerContainer = styled.div<{ isMobile?: boolean }>`
   display: flex;
-  margin: ${({ isMobile }) => (isMobile ? "130px auto" : "140px auto")};
+  margin: ${({ isMobile }) => (isMobile ? "40px auto" : "220px auto")};
   justify-content: center;
   color: ${(props) => props.theme.colors.quaternary};
   position: absolute;
@@ -95,10 +110,10 @@ const Details = styled.div`
 `;
 
 const Image = styled.img<{ isMobile?: boolean }>`
-  width: 100%;
-  height: 400px;
+  height: ${({ isMobile }) => (isMobile ? "400px" : "550px")};
   object-fit: cover;
-  opacity: 0.25;
+  opacity: ${({ isMobile }) => (isMobile ? "0.65" : "0.35")};
+  width: ${({ isMobile }) => (isMobile ? "100%" : "calc(100% / 3)")};
 `;
 
 const ImagesContainer = styled.div`
