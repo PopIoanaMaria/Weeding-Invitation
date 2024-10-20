@@ -1,7 +1,8 @@
 import React from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled from "styled-components";
 import Border from "./../Photos/Borders/border.png";
 import useMobile from "../Hooks/useMobile";
+import BorderTop from "./../Photos/Borders/borderTop.png";
 
 interface MenuItem {
   id: number;
@@ -14,74 +15,61 @@ type ContainerMenuProps = {
   title?: string;
   menu?: MenuItem[];
   isFoodMenu?: boolean;
+  children?: React.ReactNode;
 };
 
 const ContainerMenu: React.FC<ContainerMenuProps> = ({
   title,
   menu,
   isFoodMenu,
+  children,
 }) => {
   const isMobile = useMobile();
 
   return (
-    <Container isMobile={isMobile}>
-      <Title isMobile={isMobile}>{title}</Title>
-      {menu &&
-        menu.map((section, index) => (
-          <ContainerDetails key={index} isFoodMenu={isFoodMenu}>
-            <Titles>{section.title}</Titles>
+    <OuterContainer isMobile={isMobile}>
+      <InnerContainer isMobile={isMobile}>
+        <Title isMobile={isMobile}>{title}</Title>
+        {menu &&
+          menu.map((section, index) => (
+            <ContainerDetails key={index} isFoodMenu={isFoodMenu}>
+              <Titles>{section.title}</Titles>
 
-            {section.details.map((detail, detailIndex) => (
-              <Details key={detailIndex}>{detail}</Details>
-            ))}
-            {section.image ? (
-              section.id % 2 === 0 ? (
-                <LeftImage src={section.image} isMobile={isMobile} />
-              ) : (
-                <RightImage src={section.image} isMobile={isMobile} />
-              )
-            ) : null}
-          </ContainerDetails>
-        ))}
-    </Container>
+              {section.details.map((detail, detailIndex) => (
+                <Details key={detailIndex}>{detail}</Details>
+              ))}
+            </ContainerDetails>
+          ))}
+        {children}
+      </InnerContainer>
+    </OuterContainer>
   );
 };
 
 export default ContainerMenu;
 
-const slideIn = keyframes`
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const slideOut = keyframes`
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const Container = styled.div<{ isMobile?: boolean }>`
+const OuterContainer = styled.div<{ isMobile?: boolean; isFoodMenu?: boolean }>`
   display: flex;
   flex-direction: column;
-  width: ${({ isMobile }) => (isMobile ? "100%" : "80%")};
+  width: ${({ isMobile }) => !isMobile && "50%"};
   align-items: center;
   height: 100%;
-  margin: ${({ isMobile }) => (isMobile ? "0 auto" : "35px auto")};
+  margin: ${({ isMobile }) => (isMobile ? "0" : "35px auto")};
   background-color: ${({ isMobile }) => !isMobile && "transparent"};
-  padding: ${({ isMobile }) => !isMobile && "36px 0"};
-  border: ${({ isMobile }) => !isMobile && "26px solid transparent"};
+
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
   border-image: url(${Border}) 45 round;
+`;
+
+const InnerContainer = styled.div<{ isMobile?: boolean }>`
+  width: 100%;
+  padding: ${({ isMobile }) => !isMobile && "36px 0"};
+  height: 100%;
+
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+  border-image: url(${BorderTop}) 45 round;
 `;
 
 const Title = styled.div<{ isMobile?: boolean }>`
@@ -93,38 +81,8 @@ const Title = styled.div<{ isMobile?: boolean }>`
   font-family: "Allura", cursive;
   font-weight: 700;
   font-size: ${({ isMobile }) => (isMobile ? "40px" : "46px")};
-  padding: 0 0 10px 0;
+  padding: ${({ isMobile }) => (isMobile ? "25px 0 0px 0" : "10px 0 10px 0")};
   color: ${(props) => props.theme.colors.quaternary};
-`;
-
-const commonAnimatedRightImage = css<{ isMobile?: boolean }>`
-  position: absolute;
-  animation: ${slideOut} 1.5s ease-in-out;
-`;
-
-const commonAnimatedLeftImage = css<{ isMobile?: boolean }>`
-  position: absolute;
-  animation: ${slideIn} 3s ease-in-out;
-`;
-
-const RightImage = styled.img<{ isMobile?: boolean }>`
-  ${commonAnimatedRightImage};
-
-  width: ${({ isMobile }) => (isMobile ? "20vw" : "8vw")};
-  height: ${({ isMobile }) => (isMobile ? "10vh" : "20vh")};
-
-  right: ${({ isMobile }) => (isMobile ? "4vw" : "14vw")};
-  top: ${({ isMobile }) => (isMobile ? "6vh" : "6vh")};
-`;
-
-const LeftImage = styled.img<{ isMobile?: boolean }>`
-  ${commonAnimatedLeftImage};
-
-  width: ${({ isMobile }) => (isMobile ? "11vw" : "5vw")};
-  height: ${({ isMobile }) => (isMobile ? "13vh" : "28vh")};
-
-  left: ${({ isMobile }) => (isMobile ? "12vw" : "18vw")};
-  top: ${({ isMobile }) => (isMobile ? "20vh" : "14vh")};
 `;
 
 const ContainerDetails = styled.div<{ isFoodMenu?: boolean }>`

@@ -5,13 +5,13 @@ import useMobile from "../Hooks/useMobile";
 import menuPages from "./../db.json";
 
 const Menu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isopen, setIsopen] = useState<boolean>(false);
   const isMobile = useMobile();
 
   const pages = menuPages.pages;
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsopen(!isopen);
   };
 
   return (
@@ -19,17 +19,21 @@ const Menu = () => {
       {isMobile ? (
         <MobileContainer>
           <GiHamburgerMenu onClick={toggleSidebar} size="22px" />
-          <SidebarContainer isOpen={isOpen}>
+          <SidebarContainer isOpen={isopen}>
             <CloseButton onClick={toggleSidebar}>&times;</CloseButton>
-            {pages.map((page) => (
-              <SidebarItem href={page.path}>{page.name}</SidebarItem>
+            {pages.map((page, index) => (
+              <SidebarItem href={page.path} key={index}>
+                {page.name}
+              </SidebarItem>
             ))}
           </SidebarContainer>
         </MobileContainer>
       ) : (
         <WebContainer>
-          {pages.map((page) => (
-            <WebMenuItem href={page.path}>{page.name}</WebMenuItem>
+          {pages.map((page, index) => (
+            <WebMenuItem href={page.path} key={index}>
+              {page.name}
+            </WebMenuItem>
           ))}
         </WebContainer>
       )}

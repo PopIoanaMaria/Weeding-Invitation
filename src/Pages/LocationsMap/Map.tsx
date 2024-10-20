@@ -1,5 +1,8 @@
 import React from "react";
-import { Map, Marker } from "@vis.gl/react-google-maps";
+import {
+  Map,
+  Marker as AdvancedMarkerElement,
+} from "@vis.gl/react-google-maps";
 import styled from "styled-components";
 import useMobile from "../../Hooks/useMobile";
 
@@ -17,10 +20,10 @@ const CustomMap: React.FC<MapProps> = ({ lat, lng, zoom }) => {
       <Map
         defaultZoom={zoom}
         defaultCenter={{ lat, lng }}
-        gestureHandling={"greedy"}
+        gestureHandling="greedy"
         disableDefaultUI
       >
-        <Marker position={{ lat, lng }} />
+        <AdvancedMarkerElement position={{ lat, lng }} />
       </Map>
     </MapContainer>
   );

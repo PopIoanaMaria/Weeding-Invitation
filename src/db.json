@@ -48,7 +48,7 @@
     {
       "id": 1,
       "title": "Cafea",
-      "details": ["Specialitati de Cafea"],
+      "details": ["Specialități de Cafea"],
       "image": "/Photos/DrinksMenu/coffe.png"
     },
     {
@@ -56,7 +56,7 @@
       "title": "Bauturi Racoritoare",
       "details": [
         "Apă Minerală Naturală Plată Izvorul Alb",
-        "Apă Mineraă Carbogazoasă Dorna",
+        "Apă Minerală Carbogazoasă Dorna",
         "Coca Cola, Coca Cola Zero",
         "Sprite, Fanta",
         "Schweppes Tonic",
@@ -85,7 +85,7 @@
       "id": 5,
       "title": "Spirits",
       "details": [
-        "Tuica Issa",
+        "Țuică Issa",
         "Aperol, Campari",
         "Baileys, Jidvei",
         "Whiskey Jack Daniels",
@@ -162,14 +162,14 @@
       "locationTitle": "Cununia Civilă",
       "locationStreet": "Parcul Central",
       "time": "12:00",
-      "image": "/Photos/Schedule/catedrala.jpg"
+      "image": "/Photos/Schedule/cununie.jpg"
     },
     {
       "id": 2,
       "locationTitle": "Cununia Religioasă",
       "locationStreet": "Catedrala Mitropolitană",
       "time": "16:30",
-      "image": "/Photos/Schedule/cununie.jpg"
+      "image": "/Photos/Schedule/catedrala.jpg"
     },
     {
       "id": 3,
@@ -182,8 +182,8 @@
   "locationMap": [
     {
       "id": 1,
-      "name": "Starea Civilă",
-      "details": "Foișorul de ceremonii, Parcul Central",
+      "name": "Foișorul de ceremonii",
+      "details": "Parcul Central",
       "lat": 46.768763500000006,
       "lng": 23.57671509313253,
       "zoom": 16
@@ -468,7 +468,7 @@
     {
       "id": 6,
       "path": "/programa",
-      "name": "Programa"
+      "name": "Programul"
     },
     {
       "id": 7,

@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import CoverImageOne from "./../../Photos/CoverImages/CoverImageOne.jpeg";
 import useWeb from "../../Hooks/useWeb";
 import useMobile from "../../Hooks/useMobile";
 import images from "./../../db.json";
 import { calculateTimeLeft } from "../../Functions/timer";
 
-const getRandomImages = (imagesArray: any, num: number) => {
+interface ImageType {
+  id: number;
+  image: string;
+  title?: string;
+  description?: string;
+}
+
+const getRandomImages = (imagesArray: ImageType[], num: number) => {
   const shuffled = [...imagesArray].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, num);
+  const uniqueImages = Array.from(
+    new Set(shuffled.map((image) => image.image))
+  );
+
+  return uniqueImages.slice(0, num);
 };
 
 const CountdownTimer: React.FC = () => {
@@ -21,6 +31,9 @@ const CountdownTimer: React.FC = () => {
   const [randomImages, setRandomImages] = useState(
     getRandomImages(coverImages, 3)
   );
+  const [randomImagesMobile, setRandomImagesMobile] = useState(
+    getRandomImages(coverImages, 3)
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -29,7 +42,8 @@ const CountdownTimer: React.FC = () => {
 
     const imageChangeInterval = setInterval(() => {
       setRandomImages(getRandomImages(coverImages, 3));
-    }, 10000);
+      setRandomImagesMobile(getRandomImages(coverImages, 1));
+    }, 5000);
 
     return () => {
       clearInterval(timer);
@@ -38,15 +52,7 @@ const CountdownTimer: React.FC = () => {
   }, [coverImages]);
 
   return (
-    <Container>
-      {isMobile && <Image src={CoverImageOne} alt="img" isMobile={isMobile} />}
-      {isWeb && (
-        <ImagesContainer>
-          {randomImages.map((image) => (
-            <Image src={image.image} alt="img" />
-          ))}
-        </ImagesContainer>
-      )}
+    <>
       <TimerContainer isMobile={isMobile}>
         <Time isMobile={isMobile}>
           <div>{timeLeft.days}</div>
@@ -67,7 +73,20 @@ const CountdownTimer: React.FC = () => {
           </Time>
         )}
       </TimerContainer>
-    </Container>
+      <Container>
+        {isMobile && (
+          <Image src={randomImagesMobile[0]} alt="img" isMobile={isMobile} />
+        )}
+
+        {isWeb && (
+          <ImagesContainer>
+            {randomImages.map((image, index) => (
+              <Image src={image} alt={`img-${index}`} key={index} />
+            ))}
+          </ImagesContainer>
+        )}
+      </Container>
+    </>
   );
 };
 
@@ -84,7 +103,7 @@ const Time = styled.div<{ isMobile?: boolean }>`
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: ${({ isMobile }) => (isMobile ? "46px" : "62px")};
+  font-size: ${({ isMobile }) => (isMobile ? "36px" : "40px")};
   display: flex;
   flex-direction: column;
   padding: ${({ isMobile }) => (isMobile ? "0 20px" : " 0 32px")};
@@ -93,12 +112,10 @@ const Time = styled.div<{ isMobile?: boolean }>`
 
 const TimerContainer = styled.div<{ isMobile?: boolean }>`
   display: flex;
-  margin: ${({ isMobile }) => (isMobile ? "40px auto" : "220px auto")};
+  margin: ${({ isMobile }) =>
+    isMobile ? "0px auto 25px auto" : "0px auto 30px auto"};
   justify-content: center;
   color: ${(props) => props.theme.colors.quaternary};
-  position: absolute;
-  left: 0;
-  right: 0;
 `;
 
 const Details = styled.div`
@@ -106,13 +123,13 @@ const Details = styled.div`
   font-family: "Allura", cursive;
   font-weight: 600;
   font-style: normal;
-  font-size: 28px;
+  font-size: 20px;
 `;
 
 const Image = styled.img<{ isMobile?: boolean }>`
   height: ${({ isMobile }) => (isMobile ? "400px" : "550px")};
   object-fit: cover;
-  opacity: ${({ isMobile }) => (isMobile ? "0.65" : "0.35")};
+  opacity: ${({ isMobile }) => (isMobile ? "0.8" : "0.65")};
   width: ${({ isMobile }) => (isMobile ? "100%" : "calc(100% / 3)")};
 `;
 

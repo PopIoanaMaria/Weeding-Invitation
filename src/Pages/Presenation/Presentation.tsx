@@ -74,42 +74,42 @@ const NameContainer = styled.div`
 
 const FirstName = styled.div<{ isMobile?: boolean }>`
   margin: ${({ isMobile }) =>
-    isMobile ? "125px auto 0 auto" : "135px auto 0 auto"};
+    isMobile ? "100px auto 0 auto" : "110px auto 0 auto"};
   display: flex;
   justify-content: center;
   position: absolute;
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: ${({ isMobile }) => (isMobile ? "56px" : "60px")};
+  font-size: ${({ isMobile }) => (isMobile ? "56px" : "64px")};
   color: ${(props) => props.theme.colors.quaternary};
   animation: ${sideOut} 3s ease-in-out;
 `;
 
 const And = styled.div<{ isMobile?: boolean }>`
   margin: ${({ isMobile }) =>
-    isMobile ? "180px auto 0 auto" : "200px auto 0 auto"};
+    isMobile ? "160px auto 0 auto" : "180px auto 0 auto"};
   display: flex;
   justify-content: center;
   position: absolute;
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: ${({ isMobile }) => (isMobile ? "36px" : "40px")};
+  font-size: ${({ isMobile }) => (isMobile ? "36px" : "44px")};
   color: ${(props) => props.theme.colors.quaternary};
   animation: ${sideOut} 3s ease-in-out;
 `;
 
 const SecondName = styled.div<{ isMobile?: boolean }>`
   margin: ${({ isMobile }) =>
-    isMobile ? "205px auto 0 auto" : "230px auto 0 auto"};
+    isMobile ? "185px auto 0 auto" : "210px auto 0 auto"};
   display: flex;
   justify-content: center;
   position: absolute;
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: ${({ isMobile }) => (isMobile ? "56px" : "60px")};
+  font-size: ${({ isMobile }) => (isMobile ? "56px" : "64px")};
   color: ${(props) => props.theme.colors.quaternary};
   animation: ${sideOut} 3s ease-in-out;
 `;
@@ -119,9 +119,9 @@ const DateContainer = styled.div<{ isMobile?: boolean }>`
   justify-content: center;
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
-  font-weight: ${({ isMobile }) => (isMobile ? "500" : "600")};
+  font-weight: ${({ isMobile }) => (isMobile ? "600" : "600")};
   font-style: normal;
-  font-size: ${({ isMobile }) => (isMobile ? "52px" : "64px")};
+  font-size: ${({ isMobile }) => (isMobile ? "52px" : "76px")};
   color: ${(props) => props.theme.colors.tertiary};
   animation: ${slideIn} 3s ease-in-out;
   margin: 25px auto;
